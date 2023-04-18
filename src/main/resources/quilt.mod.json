@@ -1,0 +1,40 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "net.wooly",
+		"id": "forcemainhand",
+		"version": "${version}",
+		"metadata": {
+			"name": "Force Main Hand",
+			"description": "Forces your client to render your main hand to the set side because of weird servers like Hypixel which force you to use right hand\n\nNOTICE: This change is client sided. If a server disallows having your main hand changed, it won't show for other people.",
+
+			"contributors": {
+				"Woolyenough": "Owner"
+			},
+			"contact": {
+				"homepage": "https://github.com/Woolyenough/quilt-main-hand-changer",
+				"sources": "https://github.com/Woolyenough/quilt-main-hand-changer"
+			},
+			"icon": "assets/force_main_hand/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.15.0-"
+			},
+			{
+				"id": "minecraft",
+				"versions": "1.16.5-1.18.2"
+			}
+		],
+		"minecraft": {
+			"environment": "client"
+		},
+		"entrypoints": {
+			"client_init": "net.wooly.force_main_hand.ForceMainHand"
+		}
+	},
+
+	"mixin": "force_main_hand.mixins.json"
+}
